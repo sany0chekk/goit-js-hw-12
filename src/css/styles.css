@@ -4,15 +4,12 @@
   | default @import url()
   |============================
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+@import url('./gallery.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  font-family: 'Montserrat';
 
   color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
@@ -22,4 +19,102 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-input {
+  width: 272px;
+  height: 40px;
+  outline: none;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #000;
+
+  padding: 8px 16px;
+
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-input:hover {
+  border-color: #000;
+}
+
+.form-input:focus {
+  border-color: #4e75ff;
+}
+
+.form-btn,
+.more-btn {
+  padding: 8px 16px;
+  /* max-width: 91px; */
+  height: 40px;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  border: none;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-btn:hover,
+.form-btn:focus,
+.more-btn:hover,
+.more-btn:focus {
+  background-color: #6c8cff;
+}
+
+.more-btn {
+  margin: 0 auto;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-active {
+  display: block;
 }
